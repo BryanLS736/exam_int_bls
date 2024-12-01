@@ -4,4 +4,6 @@ from django.db import models
 
 class Plato(models.Model):
     nombre = models.CharField(max_length=45)
-    precio = models.CharField(max_length=15)
+    pais = models.CharField(max_length=40, default='')
+    precio = models.IntegerField()
+    procedencia = models.CharField(max_length=50, default='')

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'clientes.apps.ClientesConfig',
     'meseros.apps.MeserosConfig',
     'platos.apps.PlatosConfig',
+    'comensal.apps.ComensalConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'appweb_restaurante.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,32 @@
+{% extends 'base_generic.html' %}
+{% block title %}
+    <title>Lista total de platos</title>
+{% endblock %}
+
+{% block content %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Orden</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Pais</th>
+                <th scope="col">Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for platos in data %}
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ platos.nombre }}</td>
+                    <td>{{ platos.pais }}</td>
+                    <td>{{ platos.precio }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}
+>
