@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h4>Lista de Meseros registrados</h4>
+
+    <div class="card-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Nacionalidad</th>
+                <th scope="col">Edad</th>
+                <th scope="col">DNI</th>
+
+            </tr>
+            </thead>
+            <tbody>
+                {% for mesero in data %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ mesero.nombre }}</td>
+                        <td>{{ mesero.nacionalidad }}</td>
+                        <td>{{ mesero.edad }}</td>
+                        <td>{{ mesero.dni }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{% url 'editar_meseros' mesero.pk %}" role="button">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'eliminar_meseros' mesero.pk %}" role="button">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

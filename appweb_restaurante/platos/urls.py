@@ -4,4 +4,6 @@ from . import views
 urlpatterns = [
     path('lista_platos/', views.lista_platos, name='lista_platos'),
     path('eliminar_platos/', views.eliminar_platos, name='eliminar_platos'),
+    path('lista_platos_serializer/', views.listaplatosserializer, name='lista_platosserializer'),
+
 ]
